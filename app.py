@@ -7,7 +7,8 @@ import json
 # ==========================================
 # 設定與連線
 # ==========================================
-st.set_page_config(page_title="釜山五日遊 (雲端版)", page_icon="☁️", layout="wide")
+st.set_page_config(page_title="釜山五天", page_icon="☁️", layout="wide")
+
 st.markdown("""
 <style>
     /* 1. 調整分頁標籤字體 (這是原本的) */
@@ -271,5 +272,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
