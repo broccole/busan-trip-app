@@ -8,6 +8,20 @@ import json
 # 設定與連線
 # ==========================================
 st.set_page_config(page_title="釜山五日遊 (雲端版)", page_icon="☁️", layout="wide")
+st.markdown("""
+<style>
+    /* 1. 調整分頁標籤字體 (這是原本的) */
+    .stTabs [data-baseweb="tab"] {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* 2. 這裡新增：調整標題 (st.title) 的字體大小 */
+    h1 {
+        font-size: 32px !important;  /* 數字越小字越小，預設大約是 44px */
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # Google Sheets 檔案名稱 (必須跟你建立的一模一樣)
 SHEET_NAME = "Busan_Trip_DB"
@@ -257,4 +271,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
