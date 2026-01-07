@@ -119,7 +119,7 @@ def page_overview():
     st.title("🇰🇷 釜山五日遊 - 雲端同步版")
     # 請換回你自己的圖片檔名
     st.image("釜山纜車松島.webp", caption="Busan, Cloud Edition", use_container_width=True)
-    st.success("☁️ 目前已連線至 Google Sheets，資料將永久保存！")
+    st.success("☁️記得下載NAVER MAP! (google maps 在韓國會失靈)")
 
 def page_itinerary():
     st.title("📅 每日詳細行程 (雲端)")
@@ -244,7 +244,7 @@ def page_expenses():
         st.info("雲端表格是空的，快去記一筆吧！")
 
 def main():
-    st.sidebar.title("☁️ 雲端旅遊 App")
+    st.sidebar.title("☁️ 釜山旅遊")
     menu = st.sidebar.radio("導航", ["行程總覽", "每日行程 (雲端)", "旅費記帳"])
     
     if menu == "行程總覽":
@@ -255,4 +255,5 @@ def main():
         page_expenses()
 
 if __name__ == "__main__":
+
     main()
