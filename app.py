@@ -116,13 +116,13 @@ def save_itinerary_full(data_dict):
 # ==========================================
 
 def page_overview():
-    st.title("🇰🇷 釜山五日遊 - 雲端同步版")
+    st.title("🇰🇷 釜山五天")
     # 請換回你自己的圖片檔名
     st.image("釜山纜車松島.webp", caption="Busan, Cloud Edition", use_container_width=True)
     st.success("☁️記得下載NAVER MAP! (google maps 在韓國會失靈)")
 
 def page_itinerary():
-    st.title("📅 每日詳細行程 (雲端)")
+    st.title("📅 每日行程概覽")
     
     # 讀取
     itinerary_data = load_itinerary()
@@ -245,11 +245,11 @@ def page_expenses():
 
 def main():
     st.sidebar.title("☁️ 釜山旅遊")
-    menu = st.sidebar.radio("導航", ["行程總覽", "每日行程 (雲端)", "旅費記帳"])
+    menu = st.sidebar.radio("導航", ["行程總覽", "每日行程", "旅費記帳"])
     
     if menu == "行程總覽":
         page_overview()
-    elif menu == "每日行程 (雲端)":
+    elif menu == "每日行程":
         page_itinerary()
     elif menu == "旅費記帳":
         page_expenses()
@@ -257,3 +257,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
